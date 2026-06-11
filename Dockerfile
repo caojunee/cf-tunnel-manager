@@ -28,7 +28,7 @@ RUN apk add --no-cache curl && \
 WORKDIR /app/server
 
 # 安装后端依赖
-COPY server/package.json ./
+COPY server/package.json server/package-lock.json ./
 RUN npm ci --omit=dev
 
 # 复制后端代码
