@@ -1,0 +1,16 @@
+services:
+  cf-tunnel-manager:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cf-tunnel-manager
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./data:/data
+    environment:
+      - PORT=3001
+      - CONFIG_DIR=/data
+      - NODE_ENV=production
+    restart: unless-stopped
+    network_mode: host

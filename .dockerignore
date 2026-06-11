@@ -1,0 +1,13 @@
+.git/
+*.md
+.gitignore
+.DS_Store
+.vscode/
+.idea/
+data/
+node_modules/
+frontend/node_modules/
+frontend/dist/
+cloudflared-linux-386
+cloudflared-linux-arm
+cloudflared-linux-arm64
